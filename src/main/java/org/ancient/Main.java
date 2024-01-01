@@ -1,6 +1,7 @@
 package org.ancient;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import javax.print.Doc;
@@ -10,7 +11,11 @@ public class Main {
 
         // defining application context(beans), all the objects are called beans in spring
         // all the beans are defined in spring.xml
-        ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+//        ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+
+        // class based configuration
+        ApplicationContext context = new AnnotationConfigApplicationContext(BeanConfig.class);
+
 
         Doctor doctor = context.getBean(Doctor.class);
         doctor.assist();
