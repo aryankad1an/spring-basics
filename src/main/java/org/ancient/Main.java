@@ -29,5 +29,17 @@ public class Main {
         // interfaces
         Staff staff = context.getBean(Doctor.class);
         staff.assist();
+
+        doctor.setQualification("MBBS");
+        System.out.println(doctor); // toString override
+
+
+        Doctor doctor1 = context.getBean(Doctor.class);
+//        // we can notice that the same object is created as the scope is singleton
+//        // thus we will change scope by @Scope annotation in Doctor class
+//        System.out.println(doctor1);
+
+//        fixed it
+        System.out.println(doctor1);
     }
 }
