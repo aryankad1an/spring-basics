@@ -41,5 +41,8 @@ public class Main {
 
 //        fixed it
         System.out.println(doctor1);
+
+        // destroy all {singleton} beans
+        ((AnnotationConfigApplicationContext) context).close();
     }
 }
