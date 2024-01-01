@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    add beans here-->
+<!--    note that beans can be used from anywhere once context is defined without the new keyword-->
+    <bean class = "org.ancient.Doctor">
+<!--        setter injection to bean-->
+        <property name="qualification" value="MBBS">
+
+        </property>
+
+<!--        <property name="nurse" ref="nurse">-->
+<!--&lt;!&ndash;            this way we can inject objects into class&ndash;&gt;-->
+<!--        </property>-->
+
+<!--        constructor-->
+
+<!--        constructor injection to bean-->
+        <constructor-arg value="TenMen">
+
+        </constructor-arg>
+
+    </bean>
+    <bean class = "org.ancient.Nurse">
+
+    </bean>
+
+</beans>
