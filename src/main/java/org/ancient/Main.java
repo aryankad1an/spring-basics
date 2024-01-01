@@ -14,10 +14,10 @@ public class Main {
 
         Doctor doctor = context.getBean(Doctor.class);
         doctor.assist();
-        // the value of qualification was injected from spring.xml
-        System.out.println("qualification is " + doctor.getQualification());
-        // value of constructor was injected from spring.xml
-        System.out.println("name is " + doctor.name);
+//        // the value of qualification was injected from spring.xml
+//        System.out.println("qualification is " + doctor.getQualification());
+//        // value of constructor was injected from spring.xml
+//        System.out.println("name is " + doctor.name);
         Nurse nurse = context.getBean(Nurse.class);
         nurse.assist();
 
